@@ -1,0 +1,18 @@
+<header class="main-header">
+  <div class="header-container">
+    <div class="logo-section" (click)="onLogoClick()">
+      <h1>{{ title }}</h1>
+    </div>
+    <nav class="navigation">
+      <ul class="nav-list">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#usuarios">Usuarios</a></li>
+        <li><a href="#acerca">Acerca</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="date-section">
+      <span class="current-date">{{ currentDate | date:'dd/MM/yyyy' }}</span>
+    </div>
+  </div>
+</header>

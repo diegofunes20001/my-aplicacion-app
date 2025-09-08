@@ -1,0 +1,73 @@
+<footer class="main-footer">
+  <div class="footer-container">
+    <div class="footer-section company-info">
+      <h3>{{ companyName }}</h3>
+      <p>Desarrollando soluciones innovadoras con Angular</p>
+      <p class="developer-credit">Creado por: {{ developerName }}</p>
+    </div>
+    
+    <div class="footer-section links">
+      <h4>Enlaces Rápidos</h4>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#usuarios">Usuarios</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#acerca">Acerca de</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-section contact">
+      <h4>Contacto</h4>
+      <div class="contact-info">
+        <p>📧 <button class="contact-link" (click)="onContactClick()">contacto&#64;miempresa.com</button></p>
+        <p>📱 +1 (555) 123-4567</p>
+        <p>📍 Ciudad, País</p>
+      </div>
+    </div>
+    
+    <div class="footer-section social">
+      <h4>Síguenos</h4>
+      <div class="social-links">
+        <button 
+          class="social-btn" 
+          (click)="onSocialClick('Facebook')"
+          title="Facebook"
+        >
+          FB
+        </button>
+        <button 
+          class="social-btn" 
+          (click)="onSocialClick('Twitter')"
+          title="Twitter"
+        >
+          TW
+        </button>
+        <button 
+          class="social-btn" 
+          (click)="onSocialClick('LinkedIn')"
+          title="LinkedIn"
+        >
+          LI
+        </button>
+        <button 
+          class="social-btn" 
+          (click)="onSocialClick('GitHub')"
+          title="GitHub"
+        >
+          GH
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <div class="footer-container">
+      <div class="copyright">
+        <p>&copy; {{ currentYear }} {{ companyName }}. Todos los derechos reservados.</p>
+      </div>
+      <div class="tech-info">
+        <p>Desarrollado con ❤️ usando Angular {{ getAngularVersion() }}</p>
+      </div>
+    </div>
+  </div>
+</footer>

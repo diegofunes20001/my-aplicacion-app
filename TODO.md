@@ -1,0 +1,3 @@
+- [ ] Fix import paths in src/app/app.component.ts to match actual file locations
+- [ ] Update src/app/app.component.spec (1).ts to include necessary imports for standalone component testing
+- [ ] Run tests to verify the fix

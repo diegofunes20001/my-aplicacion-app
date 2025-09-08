@@ -1,0 +1,52 @@
+<div class="user-list-container">
+  <div class="header-section">
+    <h2>Lista de Usuarios</h2>
+    <p class="subtitle">Gestiona los usuarios de tu aplicación</p>
+  </div>
+  
+  <div class="users-grid">
+    <div 
+      *ngFor="let user of users; trackBy: trackByUserId" 
+      class="user-card"
+      [class.selected]="selectedUser?.id === user.id"
+      (click)="selectUser(user)"
+    >
+      <div class="user-avatar">
+        <span>{{ user.avatar }}</span>
+      </div>
+      
+      <div class="user-info">
+        <h3>{{ user.name }}</h3>
+        <p class="user-email">{{ user.email }}</p>
+        <span class="user-role">{{ user.role }}</span>
+      </div>
+      
+      <div class="user-actions">
+        <span 
+          class="status-badge"
+          [ngClass]="getUserStatusClass(user)"
+        >
+          {{ user.isActive ? 'Activo' : 'Inactivo' }}
+        </span>
+        
+        <button 
+          class="toggle-btn"
+          (click)="toggleUserStatus(user); $event.stopPropagation()"
+          [class.active]="user.isActive"
+        >
+          {{ user.isActive ? 'Desactivar' : 'Activar' }}
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <div *ngIf="selectedUser" class="selected-user-info">
+    <h3>Usuario Seleccionado</h3>
+    <div class="selected-details">
+      <p><strong>Nombre:</strong> {{ selectedUser.name }}</p>
+      <p><strong>Email:</strong> {{ selectedUser.email }}</p>
+      <p><strong>Rol:</strong> {{ selectedUser.role }}</p>
+      <p><strong>Estado:</strong> {{ selectedUser.isActive ? 'Activo' : 'Inactivo' }}</p>
+    </div>
+  </div>
+</div>
