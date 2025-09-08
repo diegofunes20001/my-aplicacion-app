@@ -12,7 +12,7 @@ onContactClick() {
 throw new Error('Method not implemented.');
 }
 developerName: any;
-onSocialClick(arg0: string) {
+onSocialClick() {
 throw new Error('Method not implemented.');
 }
 currentYear: any;
